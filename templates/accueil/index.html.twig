@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ parent() }} - Accueil {% endblock %}
+
+{% block body %}
+<h1 class="pt-5">Bienvenue sur mon application de gestion de contacts</h1>
+
+<ul>
+{% for leNom in lesNoms %}
+    <li> {{leNom | upper}} </li>
+{% endfor %}
+
+{% if age >18 %}
+    vous êtes majeur !
+{% else %}
+    vous êtes mineur
+{% endif %}
+<ul>
+{% endblock %}
